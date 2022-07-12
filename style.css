@@ -1,0 +1,7 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+.table > :not(caption) > * > * {
+  padding: 14px 3px;
+}
