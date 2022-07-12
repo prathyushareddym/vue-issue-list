@@ -5,6 +5,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import './style.css';
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
@@ -31,7 +32,7 @@ new Vue({
   },
 
   template: `
-  <div class="w-75 m-auto">
+  <div class="container">
   <b-table :items="items" :fields="fields">
   <template #cell(title)="data">
       <b-form-input v-if="items[data.index].isEdit" type="text" v-model="items[data.index].title"></b-form-input>
@@ -46,6 +47,7 @@ new Vue({
       <span v-else>{{data.value}}</span>
   </template>
   <template #cell(edit)="data">
+  <div class="d-flex flex-column flex-lg-row align-items-center action">
     <a @click="editRowHandler(data)">
       <span v-if="!items[data.index].isEdit"><b-icon-pencil></b-icon-pencil></span>
       <span v-else><b-icon-check></b-icon-check></span>
@@ -56,19 +58,20 @@ new Vue({
     <a @click="resolveRowHandler(data)">
       <span><b-icon-check-circle></b-icon-check-circle></span>
     </a>
+    </div>
   </template>
 </b-table>
   <div class="d-flex flex-lg-row flex-column">
     <div class="p-2 d-flex">
-      <label class="col-3 col-lg-5" for="newTitle">Title:</label>
+      <label class="col-5" for="newTitle">Title:</label>
       <input class="col-7" id="newTitle" name="newTitle" type="text" v-model="newTitle" />
     </div>
     <div class="p-2 d-flex">
-      <label class="col-3 col-lg-5" for="newDescription">Description:</label>
+      <label class="col-5" for="newDescription">Description:</label>
       <input class="col-7" id="newDescription" name="newDescription" type="text" v-model="newDescription" />
     </div>
     <div class="p-2 d-flex">
-      <label class="col-3 col-lg-5" for="newContactDetails">Contact Details:</label>
+      <label class="col-5" for="newContactDetails">Contact Details:</label>
       <input class="col-7" id="newContactDetails" name="newContactDetails" type="text" v-model="newContactDetails" />
     </div>
     <div class="p-2 d-flex justify-content-center button-div">

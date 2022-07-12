@@ -4,4 +4,19 @@ h2 {
 }
 .table > :not(caption) > * > * {
   padding: 14px 3px;
+  text-align: center;
+}
+.action {
+  justify-content: space-evenly;
+}
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
