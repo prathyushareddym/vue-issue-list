@@ -1,3 +1,3 @@
-# vue-todo-list-vuex-ye8k4f
+# vue-issue-list
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vue-todo-list-vuex-ye8k4f)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vue-issue-list)
